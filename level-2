@@ -106,3 +106,76 @@ int main() {
     return 0;
 }
 7-
+#include <stdio.h>
+#include<math.h>
+int main() {
+    int a,dig=0;
+    scanf("%d",&a);
+    int n=a;
+    int c=n;
+    int rem=0;
+    int result=0;
+    while(a>0){
+        dig+=1;
+        a=a/10;
+    }
+    // printf("%d",dig);
+    while(n>0){
+        rem=n%10;
+        result=result+pow(rem,dig);
+        n=n/10;
+            
+    }
+    printf("%d",result);
+    if(c==result){
+        printf("YES");
+    }else{
+        printf("No");
+    }
+
+    return 0;
+}
+8-
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    int dig=0;
+    int n=a;
+    while(a>0){
+        dig=dig+(a%10);
+        a=a/10;
+    }
+    if((n%dig)==0){
+        printf("Yes");
+    }else{
+        printf("No");
+    }
+
+    return 0;
+}
+9-
+#include <stdio.h>
+
+int main()
+{
+    int a,d;
+    scanf("%d",&a);
+    int n=a;
+    
+    int i=1;
+    while(i<a){
+        if(a%i==0){
+            d=d+i;
+        }
+        i++;
+    }
+    if(n==d){
+        printf("Yes Perfect Number.");
+    }else{
+        printf("No Not a Perfect Number.");
+    }
+    return 0;
+}
